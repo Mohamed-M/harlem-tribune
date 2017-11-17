@@ -1,5 +1,7 @@
 # Harlem Tribune
 
+![Infrastructure](https://i.imgur.com/Wf797yA.jpeg)
+
 This is a fictitious newspaper landing page. It is built using Grid CSS with a mobile layout for fallback support. It imports the metadata of articles (not the articles) from the Newsapi.org API.
 
 View the page here: https://mohamed-m.github.io/harlem-tribune/
