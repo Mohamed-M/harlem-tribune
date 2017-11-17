@@ -1,0 +1,202 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* Base styles (i.e. HTML tag selectors only) */
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* For easier conversion of REMs to Pixels (e.g. 1.6rem == 16px) */ 
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: #333;
+}
+
+h1 {
+  font-size: 4.2rem;
+  font-family: 'Playfair Display', serif;
+}
+
+p {
+  margin: 1rem 0 1rem 0;
+}
+
+.main-content {
+  > * {
+    padding: 2rem;
+  }
+}
+
+.splash {
+  > .featured-image {
+    margin: -2rem -2rem 0;
+  }
+
+  > .title {
+    text-align: center;
+    line-height: 2;
+  }
+
+  > .title::after {
+    display: block;
+    content: "";
+    margin: -.5rem auto 2rem;
+
+    width: 10%;
+    border-bottom: .1rem solid #ccc;
+  }
+}
+
+.splash {
+  > .copy {
+    font-weight: 300;
+    font-style: italic;
+  }
+}
+
+.first-article {
+  > .copy::first-letter {
+    font-size: 4rem;
+  }
+}
+
+.article-meta {
+  > .title {
+    font-size: 3.6rem;
+    font-style: italic;
+  }
+
+  > .title::after {
+    display: block;
+    content: "";
+
+    margin: 0 0 1rem 0;
+    border-bottom: .1rem solid #ccc;
+  }
+
+  > .author {
+    margin-bottom: 2rem;
+
+    font-size: 1.4rem;
+    font-style: italic;
+  }
+}
+
+.sub-article {
+  > .sub-image {
+    margin: 2rem 0;
+  }
+}
+ 
+@supports (display: grid) {
+  
+  @media screen and (min-width: 73rem) { // 1168px
+    
+    .main-content {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: auto;
+      grid-template-areas:
+      "splash splash first first"
+      "second second second second"
+      "third third fourth fourth";
+
+      align-content: center;
+  
+      > .splash { 
+        grid-area: splash; 
+        
+        margin: 3rem 0 0 3rem;
+      }
+  
+      > .first-article { grid-area: first; }
+  
+      > .second-article { grid-area: second; }
+  
+      > .third-article { grid-area: third; }
+  
+      > .fourth-article { grid-area: fourth; }
+    }
+    
+    .first-article {
+        > .copy {
+        column-count: 2;
+      }
+    }
+  
+    .second-article {
+      > .copy {
+        column-count: 3;
+      }
+    }
+  }
+}
+
+
+
+// Newsapi.org Key
+// 8abd39051ab844608edda7f6db41117b
